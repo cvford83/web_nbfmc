@@ -1,0 +1,331 @@
+#logo{
+    height: 100px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+
+#navlist{
+    margin-right: 10px;
+}
+
+#seedtype{
+    width: 100%;
+}
+
+#contactform div.g-recaptcha{
+    clear: both;
+    width: 304px;
+    margin: auto;
+}
+
+#map{
+    width:450px; 
+    height:370px;
+}
+/*#dove_img{
+    height: 300px;
+    width: auto;
+}*/
+
+div.buttons{
+    clear: both;
+    text-align: center;
+}
+div.center-block {
+    clear: both;
+    text-align: center;
+    display: block;
+}
+.message_display,#alerts,.alert_message{
+    text-align: center;
+    display: block;
+}
+
+.nbheader{
+    background-color: gold;
+    
+}
+
+.brand-center{
+    margin-top: 60px;
+}
+
+/*.brand-center{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }*/
+
+.brandlogo{
+    /*width="186" height="200"*/
+    max-width: 186px;
+    max-height: 200px;
+}
+
+.navbar 
+{
+    //background: url(https://www.google.com/images/srpr/logo6w.png) repeat-x;
+/*    background: #800000 url(http://www.nbfmc.org/img/piece1.png) repeat center center;
+    background-size: 100% 100px;*/
+    background: #800000 url('../img/bg_img_nav.jpg') repeat center center;
+    text-shadow:none;  
+}
+
+body{
+    background: #800000 url('../img/bg_img_main1.jpg') repeat-y center center;
+    background-size: 100% 1px;
+    
+}
+
+.pane-content { background-color: rgba(0, 0, 0, 0.9); }
+
+.purple{ 
+    background-color: rgba(153, 0,153, 0.9); 
+    background-image: url('../img/purple_bg.png'); 
+    background-repeat: repeat-y; 
+    background-size: 100% 1px;
+    margin-bottom: 20px;
+    color: #CCCC00;
+    text-shadow: 2px 1px #6B6B6B;
+    padding: 10px;
+}
+
+.burgundy{ 
+    background-color: rgba(140, 0,26, 0.9); 
+    background-image: url('../img/burgundy_bg.png'); 
+    background-repeat: repeat-y;  
+    background-size: 100% 1px;
+    margin-bottom: 20px;
+    color: #CCCC00;
+    text-shadow: 2px 1px #6B6B6B;
+    padding: 10px
+}
+
+.purple a,.burgundy a{
+    color: #CCCC00;
+    text-shadow: 2px 1px #6B6B6B;
+}
+
+.purple a:hover,.burgundy a:hover,.purple a:focus,.burgundy a:focus{
+    color: #fffaf0;
+    text-shadow: 1px 1px #CCCC00;
+    text-decoration: none;
+}
+
+.input-group-addon{
+    text-shadow:none;
+}
+
+select{
+    background: inherit;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+    border-color: #CCCC00;
+}
+
+.btn-primary{
+    border: 1px solid transparent;
+}
+
+.clear_row a{
+    color: #8C001A;
+    //text-shadow: 2px 1px #8C001A;
+}
+
+.calender{
+    width: 450px;
+    height: 450px;
+}
+
+.nav > li  a {
+    
+    color: #CCCC00;
+}
+
+.nav li > a:hover, .nav > li > a:focus,.nav .open > a,.nav .open > a:focus {
+    background-color: rgba(218, 165, 32, 0.4);
+    color: #8C001A;
+}
+
+.dropdown > ul{
+    background-color: rgba(140, 0,26, 0.9); 
+}
+
+.dropdown-menu .divider {
+    background-color: #CCCC00;
+}
+
+.dropdown-header{
+    color: #fffaf0;
+}
+
+#info{
+    text-shadow: none;
+}
+
+.alert-danger {
+    color: #FFF;
+    background-color: #b22222;
+    border-color: #8b0000;
+}
+.alert-success {
+    color: #D6E9C6;
+    background-color: #3C763D;
+    border-color: #006400;
+}
+
+.collapsed{
+    border: 1px solid rgb(204, 204, 0);
+    box-shadow: 2px 2px #6B6B6B;
+    background-color: rgba(153, 0,153, 0.4);
+}
+.navbar-toggle:hover{
+    box-shadow: none;
+    background-color: rgba(153, 0,153, 0.4);
+}
+.navbar-toggle .icon-bar{
+    background-color: rgb(204, 204, 0);
+}
+
+.navbar-toggle{
+    border: 1px solid rgb(204, 204, 0);
+    
+}
+
+.carousel-inner > .item > img,.carousel-inner > .item > a > img {
+    width: 457px;
+    height: 357px;
+    margin: auto;
+}
+
+.nav-panel{
+    display: table;
+}
+
+.nav-element{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.img-home{
+    width: auto; 
+    height: 150px;
+}
+/*.navbar-inverse{
+    background-color: #800000;
+}
+
+.navbar-inverse .navbar-toggle{
+    border-color: transparent;
+    background: transparent;
+}
+
+.navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus{
+    background-color: #463265;
+    border: none;
+}
+
+.navbar-inverse .navbar-nav  li  a {
+    color: #0FFF;
+}
+
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:hover, 
+.navbar-inverse .navbar-nav .active a:focus {
+    //border: #463265 1px solid;
+    background-color: transparent;
+}*/
+.navbar-inner{
+  background: url(images/img02.jpg) repeat-y;
+}
+
+.img-responsive{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.glyphicon-map-marker{
+    display: none;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media(max-width: 767px) {
+    /* Styles */
+    .brandlogo{
+        max-width: 93px;
+        max-height: 100px;
+    }
+    
+    
+    
+    .calender{
+        width: 100%;
+        height: 450px;
+        margin: auto;
+    }
+    
+    #map{
+        width:95%; 
+        height:250px;
+    }
+    
+    .nav-panel{
+        display:inherit    }
+
+    .nav-element{
+        display: inherit;
+        vertical-align: middle;
+    }
+    
+    .nav-element > button{
+        margin: 32px 10px;
+    }
+    
+    
+}
+@media(max-width: 375px){
+    .img-home{
+        width: 100%; 
+        height: auto;
+    }
+    
+    .carousel-control{
+        display: none;
+    }
+}
+
+/* Ipad and tablet*/
+@media(max-width: 992px){
+    .btn-lg{
+        margin: auto;
+        width: 50%;
+    }
+    .brand-center{
+        margin-bottom: 30px;
+    }
+    
+    #dove_img{
+        /*max-width: 451px;
+        max-width: auto;*/
+        display: none;
+    }
+    
+    .purple, .burgundy{
+        text-shadow: 1px 1px #6B6B6B;
+    }
+    
+    .glyphicon-map-marker{
+        display: inline-block;
+        color: #FF0000;
+        text-shadow: 2px 1px #006600;
+    }
+}
+
+@media(max-width: 1024px){
+    .calender{
+        width: 100%;
+        height: 450px;
+        margin: auto;
+    }
+    
+}

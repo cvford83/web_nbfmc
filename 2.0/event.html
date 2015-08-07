@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>NBFMC - Events</title>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="Chris Ford@NBFMC">
+      <link rel="icon" href="../img/NBFMLogo.gif">
+
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="../css/custom.css">
+
+     
+      <script src="../js/nbfmc.js" type='text/javascript'></script>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <div class="navbar" role="navigation">
+          <div class="container nav-panel">
+            <div class="navbar-header nav-element">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="brand" href="../index.html" title="Home">
+                <img src="http://www.nbfmc.org/img/NBFMLogo_lg.gif" alt="Home" class="brandlogo"/>
+              </a>
+            </div>
+              <div class="nav-element">
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav pull-right" id="navlist">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Ministry <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="../index.html#Apostles">The Apostles</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="seed.html">Seed</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Social Media</li>
+                        <li><a href="http://www.facebook.com/NBFMC">Facebook</a></li>
+                        <li><a href="http://www.twitter.com/NBFMC">Twitter</a></li>
+                        <li><a href="https://plus.google.com/115846786074634005056" rel="publisher">Google&#43</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        
+    <div class="purple">   
+        <div class="container">
+             
+            <div class="row featurette">
+                
+                <h2 class="featurette-heading">Event Calender</h2>
+                <p class="lead">Check out the upcoming events for New Beginning Faith Ministry</p>
+                <div class="col-md-6 col-md-offset-3 alert_message" id="alerts"></div>
+                <div class="col-md-7">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">&nbsp;&nbsp;</div>
+                    <a href="javascript:void(0);" onclick="display_carousel(1);" id="eventType">See Past Events</a>
+                </div>
+                <div class="col-md-5">
+                  <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=nbfministries%40gmail.com&amp;color=%23711616&amp;ctz=America%2FNew_York" style=" border-width:0 " class="calender" frameborder="0" scrolling="no"></iframe>
+                </div>
+              </div>
+        </div>
+    </div>
+
+      <!-- /END THE FEATURETTES -->
+    <div class="container clear_row">
+        <!-- Three columns of text below the featurettes -->
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Spiritual Principal</h2>
+            <p>&mdash;But seek ye first the Kingdom of God and His righteousness, and all these things shall be added unto you. Matthew 6:33</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Invitation</h2>
+            <p>You are personally invited to join us on a journey place of deep revelation and a higher level of expectation.A place for which you will have experienced the presence of God by the time you leave <a href="contact.html">More&hellip;</a><p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Revelation</h2>
+            <p>" &mdash; the believer fails by wrongfully responding, the test then becomes a temptation or solicitation to evil"</p>			
+           </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <hr class="featurette-divider">
+      
+        <!-- FOOTER -->
+        <footer>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>&copy; NBFMC 2014 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+    </div><!-- /.container -->
+
+  
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://raw.githubusercontent.com/twbs/bootstrap/master/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/jquery.touchwipe.min.js" type='text/javascript'></script>
+    <script type='text/javascript'>display_carousel();</script>
+    <script>show_alert()</script>
+  </body>
+</html>

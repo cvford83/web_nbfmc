@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Chris Ford@NBFMC">
+    <link rel="icon" href="../img/NBFMLogo.gif">
+
+    <title>NBFMC - Seed</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        window.onbeforeunload = function (e) {
+            $('#info').fadeOut(slow);
+        };
+    </script>
+  </head>
+  <body>
+      <!-- NAVBAR -->
+    <div class="navbar" role="navigation">
+          <div class="container nav-panel">
+            <div class="navbar-header nav-element">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="brand" href="../index.html" title="Home">
+                <img src="http://www.nbfmc.org/img/NBFMLogo_lg.gif" alt="Home" class="brandlogo"/>
+              </a>
+            </div>
+              <div class="nav-element">
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav pull-right" id="navlist">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Ministry <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="../index.html#Apostles">The Apostles</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="seed.html">Seed</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Social Media</li>
+                        <li><a href="http://www.facebook.com/NBFMC">Facebook</a></li>
+                        <li><a href="http://www.twitter.com/NBFMC">Twitter</a></li>
+                        <li><a href="https://plus.google.com/115846786074634005056" rel="publisher">Google&#43</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="purple">
+            <div class="container">
+              <!-- START THE FEATURETTES -->
+              <script type="text/javascript" src='../js/nbfmc.js'></script>
+              <div class="row featurette">
+                <div class="col-md-6 col-md-offset-3 alert_message" id="alerts"></div>
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="center-block">
+                        <p class="lead">"Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap. For with the measure you use, it will be measured to you.” Luke 6:38 NIV</p>
+                        <p class="lead">Your opportunity to sow into the Kingdom is here!!!</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-md-offset-3 message_display" id="info"></div>
+                <form role="form" action="https://www.paypal.com/cgi-bin/webscr" method="post" onsubmit="show_thanks()">
+                  <div class="col-md-2 col-md-offset-5">
+                      <div class="form-group">
+                          <select id="seedtype" name="item_name">
+                                <option value="Seed Offering">Seed Offering</option>
+                                <option value="Shepard's Care">Shepard's Care</option>
+                                <option value="Building Fund">Building Fund</option>
+                                <option value="Youth Ministry">Youth Ministry</option>
+                                <option value="">Other</option>
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <label for="amount">Amount</label>
+                          <div class="input-group">
+                              <span class="input-group-addon">$</span>
+                              <input type="text" class="form-control" name="amount" id="amount" onblur="validate_currency()" placeholder="00.00">
+                              <input type="hidden" name="cmd" value="_donations">
+                              <input type="hidden" name="hosted_button_id" value="W2R4QM6WE6VXW">
+                              <input type="hidden" name="business" value="nbfministries@gmail.com"> 
+                              <input type="hidden" name="return" value="http://www.nbfmc.org/2.0/seed.html">
+                              <input type="hidden" name="no_note" value="0">
+                              <input type="hidden" name="image_url" value="http://www.nbfmc.org/img/bg_img_email.png">
+                          </div>                        
+                      </div>
+                      
+
+                      <div class="buttons">
+                          <button type="submit" class="btn btn-primary btn-lg burgundy"> Sow </button>
+                      </div>
+                  </div>             
+                </form>
+              </div>
+            </div>
+    </div>
+    <div class="burgundy">
+        <div class="container">
+          <div class="row featurette">
+                <h2>Inspirational Literature</h2>
+                <div class="col-sm-12 center-block">
+                <a href="http://www.amazon.com/s/ref=ntt_athr_dp_sr_2?_encoding=UTF8&field-author=Venus%20Ponder&search-alias=books&sort=relevancerank">
+                    <img src="../img/rightShoes.jpg"/>&nbsp;&nbsp;
+                    <img src="../img/nbDevotion.jpg"/>
+                </a>
+                </div>
+          </div>
+        </div>
+    </div><!-- /END THE FEATURETTES -->
+    <!-- Three columns of text below the featurettes -->
+    <div class="container clear_row">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Spiritual Principal</h2>
+            <p>&mdash;But seek ye first the Kingdom of God and His righteousness, and all these things shall be added unto you. Matthew 6:33</p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Invitation</h2>
+            <p>You are personally invited to join us on a journey place of deep revelation and a higher level of expectation.A place for which you will have experienced the presence of God by the time you leave <a href="contact.html">More&hellip;</a><p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <h2>Revelation</h2>
+            <p>" &mdash; the believer fails by wrongfully responding, the test then becomes a temptation or solicitation to evil"</p>			
+           </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <hr class="featurette-divider">
+      
+        <!-- FOOTER -->
+        <footer>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>&copy; NBFMC 2014 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://raw.githubusercontent.com/twbs/bootstrap/master/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>show_alert()</script>
+  </body>
+</html>
+ 

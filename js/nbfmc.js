@@ -288,3 +288,96 @@ function display_carousel(){
 //    }
 }
 
+function sign_up(errors){
+    var MESSAGE = $('#info');
+    if (errors.length > 0) {
+        MESSAGE.empty();
+        // Show the errors
+        var errorString = '';
+
+        for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+            errorString += errors[i].message + '\n';
+            MESSAGE.append(errors[i].message + '<br />');
+        }
+        //alert(errorString);
+        MESSAGE.addClass('alert alert-danger alert-dismissible');
+        MESSAGE.fadeIn(200);
+    }
+    else{
+        MESSAGE.empty();
+        
+        console.log('Request Sent' );
+        //Create HttpRequest object and url variable
+        var hr = new XMLHttpRequest();
+        var url = "sign-up-capture.php?test=faith";
+        var form = $('#retreatSignup');
+        var return_data;
+        console.log("Variables created");
+        hr.open("POST", url, true);
+        // Set content type header information for sending url encoded variables in the request
+        hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        // Access the onreadystatechange event for the XMLHttpRequest object
+        hr.onreadystatechange = function() {
+            if(hr.readyState == 4 && hr.status == 200) {
+                return_data = hr.responseText;
+                console.log("Return Message: "+return_data);
+                MESSAGE.empty();
+                MESSAGE.append(return_data +'</br>');
+                if(return_data === 'Registration Step: Directing you to payment'){
+                    MESSAGE.toggleClass();
+                    MESSAGE.toggleClass('alert alert-success');
+                    console.log("Resetting form");
+                    $('input, textarea').val('');
+                    form.submit();
+                }
+                else{
+                    MESSAGE.toggleClass();
+                    MESSAGE.toggleClass('alert alert-danger alert-dismissible');
+                }
+                $('#security').empty();
+                $('#security').append('<div class="g-recaptcha" data-sitekey="6LfyswATAAAAAK3e_XlyMnty1lUAII3v3OINFmw2" ></div><br/> ');
+                $.getScript("https://www.google.com/recaptcha/api.js");
+                MESSAGE.fadeIn(200);
+                //alert(return_data);
+            }
+        };
+        // Send the data to PHP now... and wait for response to update the status div
+        hr.send(form.serialize()); // Actually execute the request
+        MESSAGE.append('Sending message...');
+        MESSAGE.toggleClass();
+        MESSAGE.toggleClass('alert alert-info');
+        MESSAGE.fadeIn(200);
+        /*
+        (function($) {
+            $('#contactform').on('submit', function(e) {
+                // Prevent the browser submitting the form
+                evt.preventDefault();
+
+                // Put the form in variable form
+                var form = $('#contactform');
+                console.log("loading form \n")
+
+
+
+                // Do a AJAX post with the form data and check the response
+                /*$.post(form.attr('action'), form.serialize(), function(data) {
+                    if(data === 'Information sent successfully') {
+                        // Captcha passed!
+                        MESSAGE.append("Message Sent Successfully")
+                    } else {
+                        // Captcha failed!
+                        MESSAGE.append("Message Not Sent <br />")
+                        MESSAGE.append("Security Code did not match <br />")
+                    }
+                    MESSAGE.fadeIn(300);
+                });
+
+            });
+        })(jQuery);
+         
+         
+         **/
+                
+        
+    }
+}

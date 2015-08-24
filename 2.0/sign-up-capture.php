@@ -63,7 +63,7 @@ if($resp != null && $resp->success ) {
         
         $record = array($first,$last,$reply,$teleNum);
         //write to file
-        $fp = fopen('..\docs\Women retreat sign-up 2015.csv', 'a');
+        $fp = fopen('../docs/Women retreat sign-up 2015.csv', 'a');
         fputcsv($fp, $record);
         fclose($fp);
         // Send

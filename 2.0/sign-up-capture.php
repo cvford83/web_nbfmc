@@ -37,9 +37,11 @@ $error = null;
 
 $reCaptcha = new ReCaptcha($secret);
 
+$msg_echo = null;
+
 // Was there a reCAPTCHA response?
 if (isset($_POST["g-recaptcha-response"])) {
-    echo('capcha posted');
+    $msg_echo.='capcha posted\n';
     $resp = $reCaptcha->verifyResponse(
             $_SERVER["REMOTE_ADDR"], $_POST["g-recaptcha-response"]
     );

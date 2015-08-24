@@ -309,8 +309,8 @@ function sign_up(errors){
         console.log('Request Sent' );
         //Create HttpRequest object and url variable
         var hr = new XMLHttpRequest();
-        var url = "sign-up-capture.php?test=faith";
-        var form = $('#retreatSignup');
+        var url = "sign-up-capture.php";
+        var form = $('#signupform');
         var return_data;
         console.log("Variables created");
         hr.open("POST", url, true);
@@ -326,9 +326,10 @@ function sign_up(errors){
                 if(return_data === 'Registration Step: Directing you to payment'){
                     MESSAGE.toggleClass();
                     MESSAGE.toggleClass('alert alert-success');
+                    window.location.href = "https://www.paypal.com/cgi-bin/webscr?"+form.serialize();
                     console.log("Resetting form");
                     $('input, textarea').val('');
-                    form.submit();
+                    
                 }
                 else{
                     MESSAGE.toggleClass();

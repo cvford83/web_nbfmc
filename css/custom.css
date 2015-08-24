@@ -12,7 +12,7 @@
     width: 100%;
 }
 
-#contactform div.g-recaptcha,#security{
+#contactform div.g-recaptcha,#signupform div.g-recaptcha{
     clear: both;
     width: 304px;
     margin: auto;

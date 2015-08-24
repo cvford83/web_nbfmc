@@ -60,8 +60,9 @@ if($resp != null && $resp->success ) {
         $last = isset($_POST['last']) ? check_input($_POST['last']):$err_string;    
         $teleNum = isset($_POST['telephone']) ? check_input($_POST['telephone']):$err_string;
         $reply = isset($_POST['email']) ? check_input($_POST['email']):$err_string;
+        $confirm = "N";
         
-        $record = array($first,$last,$reply,$teleNum);
+        $record = array($first,$last,$reply,$teleNum,$confirm);
         //write to file
         $fp = fopen('../docs/Women retreat sign-up 2015.csv', 'a');
         fputcsv($fp, $record);

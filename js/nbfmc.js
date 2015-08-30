@@ -8,15 +8,37 @@
 function show_thanks()
 {    
     //var e = document.getElementById("seedtype");
-    var strUser = $('#seedtype').val();   
+    var stype = $('#seedtype');
+    var stval = stype.val();
     var MESSAGE = $('.message_display');
+    
+    var seed = parseFloat($('#amount').val());
+    switch(seed){
+        case(20 <= seed < 30):
+            seed = seed + 1.00;
+            break;
+        case(30 <= seed  < 50):
+            seed = seed + 1.50;
+            break;
+        case(50 <= seed < 100):
+            seed = seed + 2.50;
+            break;
+        case(100 <= seed < 150):
+            seed = seed + (seed * .0275);
+            break;
+        default:
+            seed = seed + (seed * .03);
+            break;
+    }
+    $('#amount').val(seed);
     
     MESSAGE.empty();
     MESSAGE.toggleClass('alert alert-success');
+    MESSAGE.append('Adding fee...'+'</br>');
     MESSAGE.append('Please wait, you are being re-directed for transaction completion...');
     MESSAGE.fadeIn(500);
     
-    switch(strUser){
+    switch(stval){
         case 'Other':
             alert("Thank you! May your seed yield a great return!!!");
             break;
@@ -24,9 +46,10 @@ function show_thanks()
             alert("Thank you! May your Overflow seed yield a great return!!!");
             break;
         default:
-            alert("Thank you! May your "+strUser+" seed yield a great return!!!");
+            alert("Thank you! May your "+stval+" seed yield a great return!!!");
     }
-   
+    
+    stype.prop("value",strUser+' fee');
 }
 
 function show_alert()
